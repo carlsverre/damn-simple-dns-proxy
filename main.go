@@ -36,6 +36,6 @@ func main() {
 	server := &dns.Server{Addr: ":53", Net: "udp"}
 	go server.ListenAndServe()
 	for {
-		time.Sleep(1)
+		time.Sleep(5 * time.Second)
 	}
 }
