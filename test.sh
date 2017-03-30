@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 CONTAINER_ID=$(docker run --name dsdp -d -p 53/udp carlsverre/damn-simple-dns-proxy)
 PROXY_IP=$(docker inspect -f '{{ .NetworkSettings.IPAddress }}' $CONTAINER_ID)

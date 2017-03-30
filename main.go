@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"github.com/miekg/dns"
 	"math/rand"
-	"time"
 )
 
 func checkErr(err error) {
@@ -34,8 +33,5 @@ func main() {
 	dns.HandleFunc(".", proxyRequest)
 
 	server := &dns.Server{Addr: ":53", Net: "udp"}
-	go server.ListenAndServe()
-	for {
-		time.Sleep(1)
-	}
+	server.ListenAndServe()
 }
