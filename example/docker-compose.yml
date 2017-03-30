@@ -1,7 +1,7 @@
 version: '2'
 services:
   dns-proxy:
-    image: carlsverre/damn-simple-dns-proxy
+    image: carlsverre/damn-simple-dns-proxy:latest
     ports:
       - "172.18.0.1:53:53/udp"
   redis:

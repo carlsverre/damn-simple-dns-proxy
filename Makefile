@@ -2,7 +2,7 @@ VERSION := $(shell cat VERSION)
 
 .PHONY: build
 build:
-	docker build -t carlsverre/damn-simple-dns-proxy .
+	docker build -t carlsverre/damn-simple-dns-proxy:latest .
 
 .PHONY: test
 test: build
@@ -12,3 +12,4 @@ test: build
 push: build
 	docker tag carlsverre/damn-simple-dns-proxy carlsverre/damn-simple-dns-proxy:$(VERSION)
 	docker push carlsverre/damn-simple-dns-proxy:$(VERSION)
+	docker push carlsverre/damn-simple-dns-proxy:latest
