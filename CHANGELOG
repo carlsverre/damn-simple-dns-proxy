@@ -1,0 +1,8 @@
+2017-03-30 Version 1.0.1
+	* Addressed an issue pointed out by github.com/bpicolo in which the
+	  container ran an un-needed 1ms spin loop.
+	* Fixed up the build system to build in Docker to make the build more
+	  portable.
+
+2016-05-05 Version 1.0.0
+	* Working proxy
